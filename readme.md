@@ -12,8 +12,6 @@ Automatically use ./proto/{filename}.proto
 ```
 ai-server
  ┣ proto
- ┃ ┃ ┣ image_pb2.cpython-311.pyc
- ┃ ┃ ┗ image_pb2_grpc.cpython-311.pyc
  ┃ ┣ image.proto
  ┃ ┣ image_pb2.py
  ┃ ┣ image_pb2.pyi
