@@ -2,7 +2,7 @@ function Complie-Proto {
     param (
         $Filepath
     )
-    python.exe -m grpc_tools.protoc -I ./proto --python_out=./proto --grpc_python_out=./proto --pyi_out=./proto $Filepath
+    python.exe -m grpc_tools.protoc -I ./proto --python_out=./proto --grpc_python_out=./proto --pyi_out=./proto "./proto/$Filepath.proto"
 }
 
 function Check-Package {
