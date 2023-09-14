@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from proto import image_pb2 as proto_dot_image__pb2
+import image_pb2 as image__pb2
 
 
 class ImageClassifyStub(object):
@@ -16,8 +16,8 @@ class ImageClassifyStub(object):
         """
         self.ClassifyImage = channel.unary_unary(
                 '/image.ImageClassify/ClassifyImage',
-                request_serializer=proto_dot_image__pb2.ImageClassifierRequest.SerializeToString,
-                response_deserializer=proto_dot_image__pb2.ImageClassifierReply.FromString,
+                request_serializer=image__pb2.ImageClassifierRequest.SerializeToString,
+                response_deserializer=image__pb2.ImageClassifierReply.FromString,
                 )
 
 
@@ -35,8 +35,8 @@ def add_ImageClassifyServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'ClassifyImage': grpc.unary_unary_rpc_method_handler(
                     servicer.ClassifyImage,
-                    request_deserializer=proto_dot_image__pb2.ImageClassifierRequest.FromString,
-                    response_serializer=proto_dot_image__pb2.ImageClassifierReply.SerializeToString,
+                    request_deserializer=image__pb2.ImageClassifierRequest.FromString,
+                    response_serializer=image__pb2.ImageClassifierReply.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -60,7 +60,7 @@ class ImageClassify(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/image.ImageClassify/ClassifyImage',
-            proto_dot_image__pb2.ImageClassifierRequest.SerializeToString,
-            proto_dot_image__pb2.ImageClassifierReply.FromString,
+            image__pb2.ImageClassifierRequest.SerializeToString,
+            image__pb2.ImageClassifierReply.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
