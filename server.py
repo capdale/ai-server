@@ -12,7 +12,7 @@ def main():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     add_ImageClassifyServicer_to_server(ImageClassiferServicer(), server)
 
-    server.add_insecure_port("[::]:50050")
+    server.add_insecure_port("localhost:50050")
 
     server.start()
 
