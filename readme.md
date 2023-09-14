@@ -1,14 +1,18 @@
-### RPC
+## RPC
 ```powershell
 python -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. --pyi_out=. ./proto/image.proto
 ```
-Or use [./MakeProto.ps1](./MakeProto.ps1)
+Or use [./MakeProto.ps1](./MakeProto.ps1)  
 ```powershell
 ./Makeproto.ps1 image
 ```
-Automatically use ./proto/{filename}.proto
+Automatically use ./proto/{filename}.proto  
 
-### File structure
+## Protocol
+### Image
+[image.proto](./proto/image.proto)  
+
+## File structure
 ```
 ai-server
  ┣ proto
