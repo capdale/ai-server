@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11proto/image.proto\x12\x05image\"\'\n\x16ImageClassifierRequest\x12\r\n\x05image\x18\x01 \x01(\x0c\":\n\x14ImageClassifierReply\x12\r\n\x05state\x18\x01 \x01(\x03\x12\x13\n\x0b\x63lass_index\x18\x02 \x01(\x03\x32\\\n\rImageClassify\x12K\n\rClassifyImage\x12\x1d.image.ImageClassifierRequest\x1a\x1b.image.ImageClassifierReplyb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11proto/image.proto\x12\x05image\"\'\n\x16ImageClassifierRequest\x12\r\n\x05image\x18\x01 \x01(\x0c\":\n\x14ImageClassifierReply\x12\r\n\x05state\x18\x01 \x01(\x03\x12\x13\n\x0b\x63lass_index\x18\x02 \x01(\x03\x32\\\n\rImageClassify\x12K\n\rClassifyImage\x12\x1d.image.ImageClassifierRequest\x1a\x1b.image.ImageClassifierReplyB!Z\x1fgithub.com/capdale/rpc-protocolb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -21,6 +21,7 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'proto.image_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z\037github.com/capdale/rpc-protocol'
   _globals['_IMAGECLASSIFIERREQUEST']._serialized_start=28
   _globals['_IMAGECLASSIFIERREQUEST']._serialized_end=67
   _globals['_IMAGECLASSIFIERREPLY']._serialized_start=69
