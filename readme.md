@@ -15,11 +15,15 @@ Automatically use ./proto/{filename}.proto
 ## File structure
 ```
 ai-server
+ ┣ funcmodel
+ ┃ ┣ func
+ ┃ ┣ model
+ ┃ ┗ weight
  ┣ proto
- ┃ ┣ image.proto
- ┃ ┣ image_pb2.py
- ┃ ┣ image_pb2.pyi
- ┃ ┗ image_pb2_grpc.py
+ ┃ ┣ *.proto
+ ┃ ┣ *.py
+ ┃ ┣ *.pyi
+ ┃ ┗ *.py
  ┣ service
  ┃ ┗ image_classifier.py
  ┣ .gitignore
@@ -29,6 +33,7 @@ ai-server
  ┗ server.py
  ```
 
- - /proto: define .proto file and python grpc files
+ - /funcmodel: end-to-end ai model, [Check latest version](https://github.com/capdale/TEST-CNNmodel)
+ - /proto: define .proto file and python grpc files, [Check latest version](https://github.com/capdale/rpc-protocol)
  - /service: group of service class
  - server.py: main server py
