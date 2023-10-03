@@ -1,4 +1,5 @@
 from concurrent import futures
+import yaml
 
 import grpc
 
@@ -11,7 +12,13 @@ MAX_RECV_MESSAGE_LENGTH = 8388608
 
 
 def main():
-    print("Proto server load")
+    print("server load")
+    print("load config file (find config.yaml)")
+
+    with open("config.yaml") as f:
+        config = yaml.load(f, Loader=yaml.FullLoader)
+
+    server_address = config["service"]["address"]
 
     image_classfier = ImageClassify("./funcmodel/weight/cnn.pt")
 
@@ -24,11 +31,11 @@ def main():
     )
     add_ImageClassifyServicer_to_server(ImageClassiferServicer(image_classfier), server)
 
-    server.add_insecure_port("localhost:50050")
+    server.add_insecure_port(server_address)
 
     server.start()
 
-    print("Proto server start")
+    print("server start")
 
     server.wait_for_termination()
 
