@@ -1,16 +1,20 @@
-## RPC
-```powershell
-python -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. --pyi_out=. ./proto/image.proto
-```
-Or use [./MakeProto.ps1](./MakeProto.ps1)  
-```powershell
-./Makeproto.ps1 image
-```
-Automatically use ./proto/{filename}.proto  
+# AI server
+### Config
+Ref [example.yaml](./example.yaml), rename to config.yaml  
 
-## Protocol
-### Image
-[image.proto](./proto/image.proto)  
+## How to run
+Ref [example.yaml](./example.yaml), rename to config.yaml  
+```powershell
+docker build -t aiserver .
+```
+
+## Docker build image
+```powershell
+docker build -t aiserver .
+```
+
+## RPC
+[Check proto here](https://github.com/capdale/rpc-protocol)  
 
 ## File structure
 ```
@@ -34,6 +38,6 @@ ai-server
  ```
 
  - /funcmodel: end-to-end ai model, [Check latest version](https://github.com/capdale/TEST-CNNmodel)
- - /proto: define .proto file and python grpc files, [Check latest version](https://github.com/capdale/rpc-protocol)
+ - /proto: define .proto file and python grpc files, [Check proto here](https://github.com/capdale/rpc-protocol)
  - /service: group of service class
  - server.py: main server py
