@@ -1,0 +1,8 @@
+__pycache__
+/test_images
+.git
+.idea
+.dockerignore
+*.md
+.vscode
+example.yaml
