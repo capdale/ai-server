@@ -2,16 +2,24 @@
 ### Config
 Ref [example.yaml](./example.yaml), rename to config.yaml  
 
-## How to run
-Ref [example.yaml](./example.yaml), rename to config.yaml  
-```powershell
-docker build -t aiserver .
-```
-
 ## Docker build image
 ```powershell
+# docker build -t <tag> .
 docker build -t aiserver .
 ```
+ref [Dockerfile](./Dockerfile)  
+
+## Run in docker
+After build image  
+```powershell
+# docker run -d -p <port>:<prot> --gpus <gpus> --name <name> aiserver
+docker run -d -p 50050:50050 --gpus all --name aiserver aiserver
+```
+
+## How to run
+1. Config
+2. Build docker image
+3. Run in Docker
 
 ## RPC
 [Check proto here](https://github.com/capdale/rpc-protocol)  
