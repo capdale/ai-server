@@ -21,6 +21,9 @@ docker run -d -p 50050:50050 --gpus all --name aiserver aiserver
 2. Build docker image
 3. Run in Docker
 
+## Environment
+- [Miniforge](https://github.com/conda-forge/miniforge) - conda 23.3.1 (default channel, conda-forge)  
+
 ## RPC
 [Check proto here](https://github.com/capdale/rpc-protocol)  
 
