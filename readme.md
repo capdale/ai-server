@@ -13,7 +13,7 @@ ref [Dockerfile](./Dockerfile)
 After build image  
 ```powershell
 # docker run -d -p <port>:<prot> --gpus <gpus> --name <name> aiserver
-docker run -d -p 50050:50050 --gpus all --name aiserver aiserver
+docker run -d --gpus all --name aiserver --network backnet --hostname aiserver aiserver
 ```
 
 ## How to run
