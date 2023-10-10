@@ -19,4 +19,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD [ "/bin/bash", "-c", "python3 server.py" ]
+ENTRYPOINT [ "python3", "server.py"]
